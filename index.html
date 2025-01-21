@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع السياحة والعقارات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(90deg, #007bff, #6610f2);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffeb3b;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>مرحبًا بك في موقع السياحة والعقارات</h1>
+        <p><i class="fas fa-envelope"></i> للتواصل عبر البريد: 
+            <a href="mailto:zezozeed123@gmail.com">zezozeed123@gmail.com</a>
+        </p>
+    </header>
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="services.html">الخدمات</a>
+        <a href="privacy.html">سياسة الخصوصية</a>
+        <a href="contact.html">اتصل بنا</a>
+    </nav>
+    <div class="container">
+        <!-- قسم السياحة -->
+        <section>
+            <h2>السياحة</h2>
+            <p>اكتشف أجمل الوجهات السياحية حول العالم واستمتع بمغامرات لا تُنسى.</p>
+            <div class="image-grid">
+                <img src="realestate1.jpg" alt="مشهد سياحي">
+            </div>
+        </section>
+
+        <!-- قسم العقارات -->
+        <section>
+            <h2>العقارات</h2>
+            <p>نوفر لك أفضل العروض العقارية المميزة التي تناسب احتياجاتك.</p>
+            <div class="image-grid">
+                <img src="realestate2.jpg" alt="عقار للبيع">
+            </div>
+        </section>
+    </div>
+    <footer>
+        &copy; 2025 موقع السياحة والعقارات.
+    </footer>
+</body>
+</html>
