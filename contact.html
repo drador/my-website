@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اتصل بنا - موقع السياحة والعقارات</title>
+    <title>موقع السياحة والعقارات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background-color: #f4f4f4;
             color: #333;
             line-height: 1.8;
         }
@@ -19,6 +20,7 @@
             color: white;
             padding: 20px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         nav {
@@ -39,12 +41,59 @@
         }
 
         .container {
-            max-width: 800px;
-            margin: 20px auto;
+            max-width: 1200px;
+            margin: auto;
             padding: 20px;
+        }
+
+        section {
             background: white;
+            margin: 20px 0;
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            font-size: 1rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
         }
 
         footer {
@@ -54,67 +103,44 @@
             color: white;
             margin-top: 20px;
         }
-
-        footer a {
-            color: #ffeb3b;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        input, textarea {
-            width: 100%;
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>اتصل بنا</h1>
+        <h1>مرحبًا بك في موقع السياحة والعقارات</h1>
+        <p><i class="fas fa-envelope"></i> للتواصل عبر البريد: 
+            <a href="mailto:zezozeed123@gmail.com">zezozeed123@gmail.com</a>
+        </p>
     </header>
     <nav>
         <a href="index.html">الرئيسية</a>
         <a href="services.html">الخدمات</a>
-        <a href="contact.html">اتصل بنا</a>
         <a href="privacy.html">سياسة الخصوصية</a>
+        <a href="contact.html">اتصل بنا</a>
     </nav>
     <div class="container">
-        <h2>نموذج التواصل</h2>
-        <form action="https://formspree.io/f/xkgongba" method="POST" onsubmit="window.location.href='thank-you.html';">
-            <label>
-                بريدك الإلكتروني:
-                <input type="email" name="email" required>
-            </label>
-            <label>
-                رسالتك:
-                <textarea name="message" required></textarea>
-            </label>
-            <button type="submit">إرسال</button>
-        </form>
+        <section>
+            <h2>اتصل بنا</h2>
+            <p>يرجى ملء النموذج أدناه للتواصل معنا:</p>
+            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="text" name="name" placeholder="اسمك الكامل" required>
+                <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+                <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+                <select name="is_adult" required>
+                    <option value="">هل أنت بالغ؟</option>
+                    <option value="yes">نعم</option>
+                    <option value="no">لا</option>
+                </select>
+                <input type="date" name="birth_date" placeholder="تاريخ ميلادك" required>
+                <input type="text" name="languages" placeholder="اللغات التي تتحدثها" required>
+                <input type="number" name="children" placeholder="عدد أطفالك" min="0" required>
+                <textarea name="message" placeholder="اكتب رسالتك هنا..." rows="5" required></textarea>
+                <button type="submit">إرسال</button>
+            </form>
+        </section>
     </div>
     <footer>
         &copy; 2025 موقع السياحة والعقارات.
-        <br>
-        <a href="index.html">الرئيسية</a> | 
-        <a href="services.html">الخدمات</a>
     </footer>
 </body>
 </html>
