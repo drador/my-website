@@ -131,7 +131,17 @@
                 <input name="birth_date" id="birth_date" type="date" required>
 
                 <label for="languages">اللغات:</label>
-                <input name="languages" id="languages" type="text" placeholder="اكتب اللغات التي تتحدثها" required>
+                <select name="languages" id="languages" required>
+                    <option value="">اختر لغتك...</option>
+                    <option value="Arabic">العربية</option>
+                    <option value="English">الإنجليزية</option>
+                    <option value="French">الفرنسية</option>
+                    <option value="Spanish">الإسبانية</option>
+                    <option value="German">الألمانية</option>
+                    <option value="Chinese">الصينية</option>
+                    <option value="Japanese">اليابانية</option>
+                    <option value="Russian">الروسية</option>
+                </select>
 
                 <label for="children">عدد الأطفال:</label>
                 <input name="children" id="children" type="number" min="0" placeholder="اكتب عدد أطفالك" required>
